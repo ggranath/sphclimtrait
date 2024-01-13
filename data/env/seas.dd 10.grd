@@ -1,0 +1,26 @@
+[general]
+creator=R package 'raster'
+created=2017-06-15 10:08:40
+[georeference]
+nrows=158
+ncols=84
+xmin=-352686.604927571
+ymin=-535181.610689381
+xmax=487313.395072429
+ymax=1044818.38931062
+projection=+proj=aea +lat_1=50 +lat_2=70 +lat_0=60 +lon_0=16.5 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs
+[data]
+datatype=FLT8S
+byteorder=little
+nbands=1
+bandorder=BIL
+categorical=FALSE
+minvalue=195.837317292916
+maxvalue=324.686661177866
+nodatavalue=-1.7e+308
+[legend]
+legendtype=
+values=
+color=
+[description]
+layername=seas.dd
