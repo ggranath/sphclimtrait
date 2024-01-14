@@ -5,7 +5,7 @@
 # 'Trait variation across species           # 
 #  distribution boundaries in Sphagnum'.    #
 #                                           #
-# In review American Journal of Botany.     #
+# In review.                                #
 #                                           #
 #############################################
 
