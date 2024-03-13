@@ -5,8 +5,8 @@
 # 'Trait variation across species           # 
 #  distribution boundaries in Sphagnum'.    #
 #                                           #
-# In review.                                #
-#                                           #
+# Results published in American Journal of  #
+#                      Botany               #
 #############################################
 
 # Get data and output from analyses
@@ -142,10 +142,10 @@ fig3 <- ggplot(data= maxent.marg, aes(x=x, y=y, colour = species)) +
   geom_point(data= maxent.marg[!(is.na(maxent.marg$samp)),], 
              aes(x=x, y=y), shape=19, color="black")
 fig3
-ggsave2("./plots/fig3.png",
-        plot = fig5,
-        width = 170,
-        dpi = 140, bg="white",
+ggsave2("./plots/fig3.pdf",
+        plot = fig3,
+        width = 184.2,
+        dpi = 600, bg="white",
         units = "mm")
 
 # Fig. 4 water content ####

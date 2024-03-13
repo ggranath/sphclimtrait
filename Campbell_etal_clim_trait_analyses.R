@@ -5,11 +5,41 @@
 # 'Trait variation across species           # 
 #  distribution boundaries in Sphagnum'.    #
 #                                           #
-# In review.                                #
-#                                           #
+# Results published in American Journal of  #
+#                      Botany               #
 #############################################
 
 # Tested on R version 4.3.2, macOS 
+
+#> sessionInfo()
+#R version 4.3.2 (2023-10-31)
+#Platform: aarch64-apple-darwin20 (64-bit)
+#Running under: macOS Sonoma 14.3.1
+
+#other attached packages:
+#[1] fractaldim_0.8-5 abind_1.4-5      openxlsx_4.2.5.2 egg_0.4.5       
+#[5] gridExtra_2.3    cowplot_1.1.1    broom_1.0.5      gstat_2.1-1     
+#[9] terra_1.7-55     vegan_2.6-4      lattice_0.21-9   permute_0.9-7   
+#[13] lmerTest_3.1-3   lme4_1.1-35.1    Matrix_1.6-1.1   lubridate_1.9.3 
+#[17] forcats_1.0.0    stringr_1.5.1    dplyr_1.1.3      purrr_1.0.2     
+#[21] readr_2.1.4      tidyr_1.3.0      tibble_3.2.1     ggplot2_3.4.4   
+#[25] tidyverse_2.0.0  sf_1.0-14       
+
+#loaded via a namespace (and not attached):
+#[1] gtable_0.3.4        tzdb_0.4.0          numDeriv_2016.8-1.1 vctrs_0.6.4        
+#[5] tools_4.3.2         generics_0.1.3      parallel_4.3.2      proxy_0.4-27       
+#[9] spacetime_1.3-0     fansi_1.0.5         cluster_2.1.4       xts_0.13.1         
+#[13] pkgconfig_2.0.3     KernSmooth_2.23-22  lifecycle_1.0.4     compiler_4.3.2     
+#[17] FNN_1.1.3.2         munsell_0.5.0       codetools_0.2-19    class_7.3-22       
+#[21] pillar_1.9.0        nloptr_2.0.3        MASS_7.3-60         classInt_0.4-10    
+#[25] boot_1.3-28.1       nlme_3.1-163        zip_2.3.0           tidyselect_1.2.0   
+#[29] stringi_1.8.1       splines_4.3.2       grid_4.3.2          colorspace_2.1-0   
+#[33] cli_3.6.1           magrittr_2.0.3      utf8_1.2.4          e1071_1.7-13       
+#[37] withr_2.5.2         backports_1.4.1     scales_1.2.1        sp_2.1-1           
+#[41] timechange_0.2.0    zoo_1.8-12          hms_1.1.3           mgcv_1.9-0         
+#[45] rlang_1.1.2         Rcpp_1.0.11         glue_1.6.2          DBI_1.1.3          
+#[49] rstudioapi_0.15.0   minqa_1.2.6         R6_2.5.1            intervals_0.15.4   
+# [53] units_0.8-4   
 
 #Libraries####
 library(sf)
@@ -29,7 +59,7 @@ theme_set(theme_cowplot())
 
 # Data ####
 #__Environmental ####
-stk <- list.files( path="./data/env/", #
+stk <- list.files( path="./data/env_data/", #
                    pattern=".grd",recursive = TRUE,
                    full.names = TRUE)
 stk <- rast( stk)
@@ -124,7 +154,7 @@ maxent.marg <- maxent.marg %>%
 
 
 #__Canopy variables ####
-ras <- list.files( path="./data/rasters/",
+ras <- list.files( path="./data/canopy_rasters_data/",
                    pattern=".asc",recursive = TRUE,full.names=TRUE)#raster files
 
 ras.xyz <- grep( "li|cu",
